@@ -1,0 +1,35 @@
+<div class="chat-container">
+<h2 class="titulo">Atendimento on-line</h2>
+
+<div class="mensagens">
+  <!-- Mensagens fixas -->
+  <div class="atendente">
+    <p>Atendente diz:</p>
+    <div class="mensagem">Blabla blabla blabla</div>
+  </div>
+  <div class="atendente">
+    <p>Atendente diz:</p>
+    <div class="mensagem">Blabla blabla blabla</div>
+  </div>
+  <div class="usuario">
+    <p class="label-usuario">Você diz:</p>
+    <div class="mensagem">Blabla blabla blabla</div>
+  </div>
+  <div class="usuario">
+    <p class="label-usuario">Você diz:</p>
+    <div class="mensagem">Blabla blabla blabla</div>
+  </div>
+
+  <!-- Mensagens novas -->
+  <div *ngFor="let msg of mensagens.slice(4)" [ngClass]="msg.autor">
+    <p *ngIf="msg.autor === 'atendente'">Atendente diz:</p>
+    <p *ngIf="msg.autor === 'usuario'" class="label-usuario">Você diz:</p>
+    <div class="mensagem">{{ msg.texto }}</div>
+  </div>
+</div>
+
+<div class="entrada-mensagem">
+  <input #inputMensagem type="text" placeholder="Digite sua mensagem..." />
+  <button (click)="enviarMensagem()">ENVIAR</button>
+</div>
+</div>
