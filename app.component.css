@@ -1,0 +1,53 @@
+.chat-container {
+  width: 400px;
+  border: 1px solid #000;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+
+.titulo {
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: purple;
+  font-family: cursive;
+}
+
+.mensagens {
+  padding: 10px;
+  min-height: 200px;
+}
+
+.atendente .mensagem,
+.usuario .mensagem {
+  border: 1px solid #333;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.usuario {
+  text-align: right;
+}
+
+.label-usuario {
+  text-align: right;
+}
+
+.entrada-mensagem {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.entrada-mensagem input {
+  flex: 1;
+  padding: 8px;
+}
+
+.entrada-mensagem button {
+  background-color: green;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
